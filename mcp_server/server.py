@@ -1,5 +1,5 @@
 """
-MediGuide AI - MCP (Model Context Protocol) Medical Knowledge Server
+AyuMitra AI - MCP (Model Context Protocol) Medical Knowledge Server
 =====================================================================
 A custom MCP server that exposes medical knowledge tools to AI agents.
 This server implements the Model Context Protocol specification, allowing
@@ -60,16 +60,16 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [MCP-SERVER] %(levelname)s: %(message)s",
 )
-logger = logging.getLogger("mediguide.mcp_server")
+logger = logging.getLogger("ayumitra.mcp_server")
 
 # ─────────────────────────────────────────────────────────────────────────────
 # FastAPI Application
 # ─────────────────────────────────────────────────────────────────────────────
 app = FastAPI(
-    title="MediGuide MCP Medical Knowledge Server",
+    title="AyuMitra MCP Medical Knowledge Server",
     description=(
         "A Model Context Protocol (MCP) server exposing medical knowledge tools "
-        "to AI agents. Part of the MediGuide AI multi-agent healthcare system."
+        "to AI agents. Part of the AyuMitra AI multi-agent healthcare system."
     ),
     version="1.0.0",
     docs_url="/docs",
@@ -123,7 +123,7 @@ async def health_check():
     """
     return {
         "status": "healthy",
-        "server": "MediGuide MCP Medical Knowledge Server",
+        "server": "AyuMitra MCP Medical Knowledge Server",
         "version": "1.0.0",
         "timestamp": datetime.now().isoformat(),
         "tools_available": len(MEDICAL_TOOLS_MANIFEST),
@@ -141,7 +141,7 @@ async def list_tools():
     logger.info("Tool discovery request received")
     return {
         "protocol": "MCP/1.0",
-        "server_name": "mediguide-medical-knowledge",
+        "server_name": "ayumitra-medical-knowledge",
         "tools": MEDICAL_TOOLS_MANIFEST,
         "total_tools": len(MEDICAL_TOOLS_MANIFEST),
     }
@@ -249,7 +249,7 @@ async def sse_events(request: Request):
     """
     async def event_generator():
         # Send initial connection confirmation
-        yield f"data: {json.dumps({'type': 'connected', 'server': 'mediguide-mcp', 'timestamp': datetime.now().isoformat()})}\n\n"
+        yield f"data: {json.dumps({'type': 'connected', 'server': 'ayumitra-mcp', 'timestamp': datetime.now().isoformat()})}\n\n"
 
         # Keep connection alive with periodic heartbeat
         count = 0
@@ -277,7 +277,7 @@ async def sse_events(request: Request):
 async def root():
     """Root endpoint with server information."""
     return {
-        "name": "MediGuide MCP Medical Knowledge Server",
+        "name": "AyuMitra MCP Medical Knowledge Server",
         "description": "Model Context Protocol server for healthcare AI agents",
         "version": "1.0.0",
         "endpoints": {
@@ -288,8 +288,8 @@ async def root():
             "events": "GET /events (SSE)",
             "docs": "GET /docs",
         },
-        "project": "MediGuide AI — Kaggle AI Agents Capstone",
-        "github": "https://github.com/maruthisaiteja/mediguide-ai",
+        "project": "AyuMitra AI — Kaggle AI Agents Capstone",
+        "github": "https://github.com/AnnamPranav/AyuMitra",
     }
 
 
@@ -300,7 +300,7 @@ if __name__ == "__main__":
     port = int(os.getenv("MCP_SERVER_PORT", "8080"))
     host = os.getenv("MCP_SERVER_HOST", "0.0.0.0")
 
-    logger.info(f"🚀 Starting MediGuide MCP Server on {host}:{port}")
+    logger.info(f"🚀 Starting AyuMitra MCP Server on {host}:{port}")
     logger.info(f"📚 {len(MEDICAL_TOOLS_MANIFEST)} medical tools available")
     logger.info(f"📖 API docs available at http://localhost:{port}/docs")
 

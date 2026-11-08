@@ -1,1 +1,1 @@
-"""MediGuide AI - Source Package"""
+"""AyuMitra AI - Source Package"""

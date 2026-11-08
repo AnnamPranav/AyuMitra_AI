@@ -1,4 +1,4 @@
-# 🏥 MediGuide AI — Multi-Agent Healthcare Navigation System
+# 🏥 AyuMitra AI — Multi-Agent Healthcare Navigation System
 
 > **Kaggle AI Agents: Intensive Vibe Coding Capstone Project**
 > Track: **Agents for Good** | Built with **Google ADK + Gemini 2.0 Flash**
@@ -18,13 +18,13 @@ Healthcare navigation is broken. When people feel unwell, they face:
 - **Fragmented care** — Separate apps for symptoms, medications, appointments
 - **Dangerous decisions** — 40% of people self-medicate incorrectly
 
-**MediGuide AI solves this** by providing a single, intelligent, multi-agent healthcare navigation system that helps users understand their symptoms, find reliable medical information, manage medications, and prepare for doctor visits — all in one place, available 24/7.
+**AyuMitra AI solves this** by providing a single, intelligent, multi-agent healthcare navigation system that helps users understand their symptoms, find reliable medical information, manage medications, and prepare for doctor visits — all in one place, available 24/7.
 
 ---
 
-## 🤖 What is MediGuide AI?
+## 🤖 What is AyuMitra AI?
 
-MediGuide AI is a **multi-agent AI system** built with Google's ADK (Agent Development Kit) that acts as a personal healthcare navigator. It combines:
+AyuMitra AI is a **multi-agent AI system** built with Google's ADK (Agent Development Kit) that acts as a personal healthcare navigator. It combines:
 
 | Component | Purpose |
 |---|---|
@@ -67,7 +67,7 @@ MediGuide AI is a **multi-agent AI system** built with Google's ADK (Agent Devel
                           │
           ┌───────────────▼───────────────┐
           │      Orchestrator Agent        │  ← Google ADK Root Agent
-          │    (MediGuide Coordinator)     │     Gemini 2.0 Flash
+          │    (AyuMitra Coordinator)     │     Gemini 2.0 Flash
           │                               │     Multi-turn memory
           └──────┬──────────┬─────────────┘
                  │          │          │
@@ -98,8 +98,8 @@ MediGuide AI is a **multi-agent AI system** built with Google's ADK (Agent Devel
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/maruthisaiteja/mediguide-ai.git
-cd mediguide-ai
+git clone https://github.com/AnnamPranav/AyuMitra
+cd ayumitra-ai
 ```
 
 ### 2. Set Up Environment
@@ -124,7 +124,7 @@ python mcp_server/server.py
 # Docs at http://localhost:8080/docs
 ```
 
-### 4. Run MediGuide AI (Terminal 2)
+### 4. Run AyuMitra AI (Terminal 2)
 ```bash
 # Interactive chat mode
 python src/main.py
@@ -163,11 +163,11 @@ docker-compose down
 
 ```bash
 # Build and push image
-gcloud builds submit --tag gcr.io/PROJECT_ID/mediguide-ai
+gcloud builds submit --tag gcr.io/PROJECT_ID/ayumitra-ai
 
 # Deploy to Cloud Run
-gcloud run deploy mediguide-ai \
-  --image gcr.io/PROJECT_ID/mediguide-ai \
+gcloud run deploy ayumitra-ai \
+  --image gcr.io/PROJECT_ID/ayumitra-ai \
   --platform managed \
   --region us-central1 \
   --allow-unauthenticated \
@@ -230,7 +230,7 @@ curl -X POST http://localhost:8080/tools/call \
 
 ## 🔒 Security Features
 
-MediGuide AI implements defense-in-depth security:
+AyuMitra AI implements defense-in-depth security:
 
 | Feature | Implementation |
 |---|---|
@@ -247,7 +247,7 @@ MediGuide AI implements defense-in-depth security:
 ## 📁 Project Structure
 
 ```
-mediguide-ai/
+ayumitra-ai/
 │
 ├── src/                        # Main application code
 │   ├── agents/
@@ -284,7 +284,7 @@ mediguide-ai/
 
 ## ⚠️ Medical Disclaimer
 
-**MediGuide AI is an educational tool and NOT a substitute for professional medical advice, diagnosis, or treatment.**
+**AyuMitra AI is an educational tool and NOT a substitute for professional medical advice, diagnosis, or treatment.**
 
 - Always seek the advice of a qualified healthcare provider with questions about a medical condition
 - Never disregard professional medical advice based on information from this AI

@@ -1,6 +1,6 @@
-# MediGuide AI — Kaggle Competition Writeup
+# AyuMitra AI — Kaggle Competition Writeup
 
-**Title:** MediGuide AI: A Multi-Agent Healthcare Navigation System Built with Google ADK
+**Title:** AyuMitra AI: A Multi-Agent Healthcare Navigation System Built with Google ADK
 
 **Subtitle:** Transforming healthcare navigation through intelligent agent orchestration, MCP-powered knowledge retrieval, and security-first design
 
@@ -36,7 +36,7 @@ Healthcare queries are naturally multi-dimensional. When someone says "I've had 
 
 No single prompt to a single LLM can reliably do all of this well. A multi-agent architecture, where each specialist agent is optimized for its specific task, is the natural solution.
 
-**MediGuide AI uses four agents working in concert:**
+**AyuMitra AI uses four agents working in concert:**
 
 - **OrchestratorAgent**: The intelligent router that understands user intent and delegates to the right specialist
 - **TriageAgent**: Dedicated symptom analysis with a 5-level urgency classification system
@@ -57,7 +57,7 @@ The OrchestratorAgent uses Google ADK's multi-agent capability to delegate to sp
 
 ### 3.2 Custom MCP Server for Knowledge Retrieval
 
-Rather than relying solely on the LLM's training data (which may be outdated or inconsistent for medical information), MediGuide AI implements a **custom MCP (Model Context Protocol) server** that provides structured, curated medical knowledge.
+Rather than relying solely on the LLM's training data (which may be outdated or inconsistent for medical information), AyuMitra AI implements a **custom MCP (Model Context Protocol) server** that provides structured, curated medical knowledge.
 
 The MCP server (`mcp_server/server.py`) exposes 8 medical knowledge tools via HTTP/SSE transport:
 
@@ -76,7 +76,7 @@ The MCP protocol ensures that any MCP-compatible agent can connect to and use th
 
 ### 3.3 Security-First Design
 
-Healthcare applications handle sensitive information. MediGuide AI implements a multi-layer security architecture in `src/tools/security.py`:
+Healthcare applications handle sensitive information. AyuMitra AI implements a multi-layer security architecture in `src/tools/security.py`:
 
 **Layer 1 — Input Processing:**
 - PII detection and redaction (phone numbers, emails, SSNs, Aadhaar numbers, addresses, credit cards)
@@ -103,7 +103,7 @@ Two standalone skills (`skills/symptom_checker.py` and `skills/medication_remind
 
 ### 3.5 Deployability
 
-MediGuide AI is fully containerized:
+AyuMitra AI is fully containerized:
 - **Multi-stage Dockerfile**: Builder stage + slim production image
 - **Security**: Runs as non-root user
 - **Health checks**: Both Dockerfile and Docker Compose health monitoring
@@ -191,7 +191,7 @@ User sees: Comprehensive medication information with safety context
 
 ### What Makes This Different from ChatGPT?
 
-| Feature | MediGuide AI | Generic LLM |
+| Feature | AyuMitra AI | Generic LLM |
 |---|---|---|
 | Structured triage levels | ✅ Defined 5-level system | ❌ Unstructured |
 | Emergency routing | ✅ Immediate, specific | ❌ Generic advice |
@@ -237,7 +237,7 @@ User sees: Comprehensive medication information with safety context
 
 ## 8. Conclusion
 
-MediGuide AI demonstrates that multi-agent systems, built with Google ADK and Gemini, can address meaningful real-world problems in healthcare navigation. By combining:
+AyuMitra AI demonstrates that multi-agent systems, built with Google ADK and Gemini, can address meaningful real-world problems in healthcare navigation. By combining:
 
 - **Specialist agents** for focused, high-quality reasoning
 - **MCP protocol** for structured, current knowledge retrieval
@@ -247,7 +247,7 @@ MediGuide AI demonstrates that multi-agent systems, built with Google ADK and Ge
 
 ...we've built not just a prototype, but a foundation for AI-powered healthcare navigation that could genuinely improve health outcomes.
 
-The project story: Healthcare navigation shouldn't require medical expertise to navigate. With MediGuide AI, anyone can get intelligent, safe, and personalized guidance — from the first symptom to the right specialist, from the first dose to the refill reminder.
+The project story: Healthcare navigation shouldn't require medical expertise to navigate. With AyuMitra AI, anyone can get intelligent, safe, and personalized guidance — from the first symptom to the right specialist, from the first dose to the refill reminder.
 
 **This is what AI agents, done right, can do for the world.**
 
@@ -255,4 +255,4 @@ The project story: Healthcare navigation shouldn't require medical expertise to 
 
 *Word count: ~1,850 words*
 *Track: Agents for Good*
-*GitHub: https://github.com/maruthisaiteja/mediguide-ai*
+*GitHub: *https://github.com/AnnamPranav/AyuMitra*

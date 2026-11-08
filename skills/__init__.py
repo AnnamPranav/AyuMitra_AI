@@ -1,3 +1,3 @@
 """
-MediGuide AI - Skills Package
+AyuMitra AI - Skills Package
 """

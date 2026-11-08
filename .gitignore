@@ -1,25 +1,62 @@
-# Secrets
+# ─── Secrets (NEVER commit these) ────────────────────────────────────────────
 .env
-.env.*
-!.env.example
+*.env.local
+*.env.production
 
-# Python
+# ─── Python ───────────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
-.venv/
-venv/
-.pytest_cache/
-.mypy_cache/
-.coverage
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.installed.cfg
+*.egg
 
-# OS / IDE
-.DS_Store
+# ─── Virtual Environments ────────────────────────────────────────────────────
+venv/
+env/
+.venv/
+.env_bak/
+ENV/
+
+# ─── Testing ──────────────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+*.coveragerc
+
+# ─── IDE ──────────────────────────────────────────────────────────────────────
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
 
-# Vercel
-.vercel/
+# ─── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
 
-# Local logs
+# ─── Logs ─────────────────────────────────────────────────────────────────────
 logs/
 *.log
+*.log.*
+
+# ─── Docker ───────────────────────────────────────────────────────────────────
+.dockerignore
+
+# ─── Jupyter ──────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ─── mypy ─────────────────────────────────────────────────────────────────────
+.mypy_cache/
+
+# Local runtime and backup files
+ayumitra_ai/.adk/
+*.save
