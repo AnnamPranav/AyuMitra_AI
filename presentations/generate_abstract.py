@@ -1,5 +1,5 @@
 """
-MediGuide AI — Abstract Form Populator
+AyuMitra AI — Abstract Form Populator
 ======================================
 This script opens the original 'Abstract Format.docx' template,
 populates all metadata fields (Batch, Title, Domain, Supervisor, Student Names),
@@ -19,7 +19,7 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 # ─────────────────────────────────────────────────────────────────────────────
 BATCH           = "2023 - 2027  ( Phase - I )"
 BATCH_ID        = "23ITMNP-B01"
-PROJECT_TITLE   = "MediGuide AI: A Multimodal Multi-Agent Healthcare Navigation System"
+PROJECT_TITLE   = "AyuMitra – An Multi-Agent Personalized Healthcare Companion"
 DOMAIN          = "Healthcare Artificial Intelligence & Multi-Agent Systems"
 TYPE_OF_PROJECT = "Application / Product"
 SUPERVISOR      = "Dr. Supervisor Name, Associate Professor"  # User can replace
@@ -35,7 +35,7 @@ STUDENTS = [
 DATE = "17.07.2026"
 
 TEMPLATE_PATH = r'C:\Users\marut\capstone\presentations\Abstract Format.docx'
-OUTPUT_PATH   = r'C:\Users\marut\capstone\presentations\MediGuide_AI_Abstract.docx'
+OUTPUT_PATH   = r'C:\Users\marut\capstone\presentations\AyuMitra_AI_Abstract.docx'
 
 # ─────────────────────────────────────────────────────────────────────────────
 # 500-Word Clinical / Technical Abstract
@@ -47,12 +47,12 @@ ABSTRACT_TEXT = (
     "misinterpreted laboratory diagnostics, and non-adherence to complex medication timing schedules. This systemic crisis is "
     "exacerbated in developing nations like India, where the physician-to-population ratio stands at a critical 1:1,457, leaving "
     "millions of patients without timely access to qualified clinical interpretations of their diagnostic reports. "
-    "To address this gap, this project proposes MediGuide AI, an advanced, consumer-facing multimodal multi-agent healthcare "
+    "To address this gap, this project proposes AyuMitra AI, an advanced, consumer-facing multimodal multi-agent healthcare "
     "navigation and clinical decision support system built on Google's Agent Development Kit (ADK) framework.\n\n"
 
-    "MediGuide AI coordinates five specialized domain-specialist AI sub-agents — TriageAgent, ResearchAgent, SchedulerAgent, "
+    "AyuMitra AI coordinates five specialized domain-specialist AI sub-agents — TriageAgent, ResearchAgent, SchedulerAgent, "
     "VisionAgent, and LabAgent — via a root OrchestratorAgent that routes patient queries with clinical precision. Unlike general-purpose "
-    "large language models that generate probabilistic and potentially hallucinatory text, MediGuide AI implements a hybrid architecture "
+    "large language models that generate probabilistic and potentially hallucinatory text, AyuMitra AI implements a hybrid architecture "
     "combining large language model reasoning with a local, deterministic clinical database for safety-critical checks. "
     "The system's technical core comprises five primary modules: (1) a Multimodal Image Processing Pipeline utilizing Pillow "
     "image normalization, scaling, and contrast enhancement (CLAHE) coupled with Gemini Vision to perform handwritten prescription "
@@ -67,7 +67,7 @@ ABSTRACT_TEXT = (
     "identifying drug-drug therapeutic duplications (such as flagging the concurrent use of the brand name Trimox and generic Amoxicillin), "
     "provides immediate life-saving alerts for critical diagnostic results (e.g., triggering emergency protocols for elevated cardiac "
     "Troponin or potassium levels), and correctly generates patient-friendly dietary and timing safety instructions. "
-    "By bridging the critical gap between complex diagnostic output and patient understanding, MediGuide AI provides a "
+    "By bridging the critical gap between complex diagnostic output and patient understanding, AyuMitra AI provides a "
     "scalable, secure, and deployable solution to reduce preventable medical errors and improve home-level patient safety."
 )
 

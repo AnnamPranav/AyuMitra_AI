@@ -1,5 +1,5 @@
 """
-MediGuide AI - Medical Tools Library
+AyuMitra AI - Medical Tools Library
 ======================================
 Core tool functions used by the agent system. These functions implement
 the medical knowledge retrieval and processing logic.
@@ -413,7 +413,7 @@ def get_condition_overview(condition_name: str, detail_level: str = "standard") 
             return {
                 "condition": db_condition,
                 **data,
-                "source": "MediGuide Medical Knowledge Base (educational purposes only)",
+                "source": "AyuMitra Medical Knowledge Base (educational purposes only)",
                 "disclaimer": "This information is for educational purposes. Consult your doctor for personalized advice.",
             }
 

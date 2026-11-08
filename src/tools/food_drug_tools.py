@@ -1,5 +1,5 @@
 """
-MediGuide AI — Food-Drug & Lifestyle Interactions Engine
+AyuMitra AI — Food-Drug & Lifestyle Interactions Engine
 =========================================================
 Identifies dangerous interactions between:
   - Drugs and common foods (grapefruit, alcohol, dairy, etc.)
@@ -332,7 +332,7 @@ def generate_medication_schedule(medications: List[Dict]) -> dict:
 def format_food_drug_display(result: dict) -> str:
     """Formats food-drug interaction results for terminal display."""
     lines = ["=" * 70,
-             "  [MediGuide AI] Food-Drug & Lifestyle Interaction Safety Check",
+             "  [AyuMitra AI] Food-Drug & Lifestyle Interaction Safety Check",
              "=" * 70,
              f"\nTotal Interactions Found: {result['total_interactions']}"]
 
@@ -370,7 +370,7 @@ def format_food_drug_display(result: dict) -> str:
 def format_schedule_display(schedule_result: dict) -> str:
     """Formats the daily medication schedule for terminal display."""
     lines = ["=" * 70,
-             "  [MediGuide AI] Personalized Daily Medication Schedule",
+             "  [AyuMitra AI] Personalized Daily Medication Schedule",
              "=" * 70,
              f"\nTotal Medications: {schedule_result['total_medications']}\n"]
 

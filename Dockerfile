@@ -1,10 +1,10 @@
 # ─────────────────────────────────────────────────────────────────────────────
-# MediGuide AI — Docker Configuration
+# AyuMitra AI — Docker Configuration
 # ─────────────────────────────────────────────────────────────────────────────
 # Demonstrates "Deployability" — one of the 6 Kaggle evaluation concepts
 #
-# Build: docker build -t mediguide-ai .
-# Run:   docker run -p 8080:8080 --env-file .env mediguide-ai
+# Build: docker build -t ayumitra-ai .
+# Run:   docker run -p 8080:8080 --env-file .env ayumitra-ai
 #
 # Multi-stage build for minimal production image size
 # ─────────────────────────────────────────────────────────────────────────────
@@ -30,8 +30,8 @@ RUN pip install --no-cache-dir --upgrade pip \
 FROM python:3.11-slim AS production
 
 # Security: run as non-root user
-RUN groupadd --gid 1000 mediguide \
-    && useradd --uid 1000 --gid mediguide --shell /bin/bash --create-home mediguide
+RUN groupadd --gid 1000 ayumitra \
+    && useradd --uid 1000 --gid ayumitra --shell /bin/bash --create-home ayumitra
 
 WORKDIR /app
 
@@ -40,10 +40,10 @@ COPY --from=builder /usr/local/lib/python3.11/site-packages /usr/local/lib/pytho
 COPY --from=builder /usr/local/bin /usr/local/bin
 
 # Copy application code
-COPY --chown=mediguide:mediguide . .
+COPY --chown=ayumitra:ayumitra . .
 
 # Switch to non-root user
-USER mediguide
+USER ayumitra
 
 # Health check endpoint
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
@@ -61,7 +61,7 @@ ENV MCP_SERVER_PORT=8080 \
     PYTHONUNBUFFERED=1
 
 # Entry point: start the MCP server by default
-# Override with: docker run mediguide-ai python src/main.py --demo
+# Override with: docker run ayumitra-ai python src/main.py --demo
 CMD ["python", "mcp_server/server.py"]
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -69,8 +69,8 @@ CMD ["python", "mcp_server/server.py"]
 # CMD ["python", "src/main.py"]
 #
 # For Google Cloud Run:
-# gcloud run deploy mediguide-ai \
-#   --image gcr.io/PROJECT_ID/mediguide-ai \
+# gcloud run deploy ayumitra-ai \
+#   --image gcr.io/PROJECT_ID/ayumitra-ai \
 #   --platform managed \
 #   --region us-central1 \
 #   --allow-unauthenticated

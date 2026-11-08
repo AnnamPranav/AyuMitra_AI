@@ -1,1 +1,1 @@
-"""MediGuide AI - Agents Package"""
+"""AyuMitra AI - Agents Package"""

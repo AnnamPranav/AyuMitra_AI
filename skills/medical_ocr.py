@@ -1,5 +1,5 @@
 """
-MediGuide Vision AI — Standalone Medical OCR & Interaction Checker Skill
+AyuMitra Vision AI — Standalone Medical OCR & Interaction Checker Skill
 ========================================================================
 An Agents CLI compatible skill that:
   1. Accepts an image of a prescription (handwritten or printed).
@@ -150,7 +150,7 @@ class MedicalOCR_Skill:
 
         lines = [
             "\n" + "="*65,
-            "  [MediGuide Vision] Prescription Scan & OCR Safety Report",
+            "  [AyuMitra Vision] Prescription Scan & OCR Safety Report",
             "="*65,
             f"\nImage Path: {result['image_path']}",
             "\n--- OCR TRANSCRIPTION ---",
@@ -184,7 +184,7 @@ class MedicalOCR_Skill:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="MediGuide Vision AI - Medical OCR Skill")
+    parser = argparse.ArgumentParser(description="AyuMitra Vision AI - Medical OCR Skill")
     parser.add_argument("--image", "-i", type=str, help="Path to prescription image")
     parser.add_argument("--json", action="store_true", help="Output raw JSON")
     parser.add_argument("--metadata", action="store_true", help="Print skill metadata")

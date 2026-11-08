@@ -1,5 +1,5 @@
 """
-MediGuide AI — Lab Report Intelligence Engine
+AyuMitra AI — Lab Report Intelligence Engine
 ==============================================
 Provides a comprehensive clinical laboratory reference database and analysis
 functions to interpret blood test results, flag abnormal values, and generate
@@ -585,7 +585,7 @@ def format_lab_report_display(report: dict) -> str:
     """
     lines = []
     lines.append("=" * 70)
-    lines.append("  [MediGuide AI] Intelligent Lab Report Analysis")
+    lines.append("  [AyuMitra AI] Intelligent Lab Report Analysis")
     lines.append("=" * 70)
     lines.append(f"\nTests Analyzed: {report['total_tests']} | "
                  f"Critical: {report['critical_count']} | "

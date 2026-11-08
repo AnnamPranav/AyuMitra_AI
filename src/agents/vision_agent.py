@@ -1,5 +1,5 @@
 """
-MediGuide Vision AI — Multimodal Vision Agent
+AyuMitra Vision AI — Multimodal Vision Agent
 ============================================
 Specialist sub-agent responsible for processing medical images, performing
 handwritten prescription OCR, identifying pill bottles, and classifying skin rashes.
@@ -74,7 +74,7 @@ vision_agent = LlmAgent(
     model="gemini-2.5-flash",
 
     instruction="""
-You are the MediGuide Vision Specialist — an AI agent with deep expertise in medical image processing and multimodal analysis.
+You are the AyuMitra Vision Specialist — an AI agent with deep expertise in medical image processing and multimodal analysis.
 Your role is to analyze medical images (handwritten prescriptions, skin rash photos, pill bottles) and return structured, clear assessments.
 
 ## Your Process (depending on image type)

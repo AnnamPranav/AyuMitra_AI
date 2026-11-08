@@ -1,5 +1,5 @@
 """
-MediGuide Vision AI — Image Preprocessing and Verification Tools
+AyuMitra Vision AI — Image Preprocessing and Verification Tools
 ===============================================================
 Provides image handling utilities to support the Image Processing domain.
 Uses Pillow to validate, resize, format, and normalize medical images, prescription scans,

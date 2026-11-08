@@ -1,5 +1,5 @@
 """
-MediGuide AI — Standalone Lab Report Analyzer Skill
+AyuMitra AI — Standalone Lab Report Analyzer Skill
 ====================================================
 CLI skill for analyzing blood test results directly from the command line.
 Accepts typed lab values or JSON input and outputs a comprehensive
@@ -78,7 +78,7 @@ def parse_schedule_string(schedule_str: str) -> list:
 def print_demo_examples():
     """Prints built-in demo examples to show the system's power without any input."""
     print("\n" + "=" * 70)
-    print("  [MediGuide AI] Lab Analyzer — DEMO MODE")
+    print("  [AyuMitra AI] Lab Analyzer — DEMO MODE")
     print("=" * 70)
 
     # Demo 1: Diabetic patient with kidney stress
@@ -121,7 +121,7 @@ def print_demo_examples():
 
 def main():
     parser = argparse.ArgumentParser(
-        description="MediGuide AI — Intelligent Lab Report Analyzer",
+        description="AyuMitra AI — Intelligent Lab Report Analyzer",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__
     )

@@ -1,5 +1,5 @@
 """
-MediGuide AI — Literature Survey Report Populator
+AyuMitra AI — Literature Survey Report Populator
 ==================================================
 This script opens the original 'Literature Survey Report.docx' template
 and populates the 20 empty table rows with 20 high-quality medical and
@@ -25,7 +25,7 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 DATE = "17.07.2026"
 
 TEMPLATE_PATH = r'C:\Users\marut\capstone\presentations\Literature Survey Report.docx'
-OUTPUT_PATH   = r'C:\Users\marut\capstone\presentations\MediGuide_AI_Literature_Survey_Final.docx'
+OUTPUT_PATH   = r'C:\Users\marut\capstone\presentations\AyuMitra_AI_Literature_Survey_Final.docx'
 
 
 # ─────────────────────────────────────────────────────────────────────────────

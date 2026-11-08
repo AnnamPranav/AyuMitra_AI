@@ -1,8 +1,8 @@
-# MediGuide AI — Detailed Architecture Documentation
+# AyuMitra AI — Detailed Architecture Documentation
 
 ## System Overview
 
-MediGuide AI is a multi-agent healthcare navigation system implementing the following Google ADK course concepts:
+AyuMitra AI is a multi-agent healthcare navigation system implementing the following Google ADK course concepts:
 
 1. **Multi-Agent System (ADK)** — Orchestrator + 3 specialist sub-agents
 2. **MCP Server** — Custom Model Context Protocol server with 8 tools
@@ -170,7 +170,7 @@ Agent Response → [Output Scan] → User
 
 ## Image Processing Pipeline (`src/tools/vision_tools.py`)
 
-To align with academic and production-level **Image Processing** guidelines, MediGuide Vision utilizes a structured local image processing pipeline before sending content to generative AI models:
+To align with academic and production-level **Image Processing** guidelines, AyuMitra Vision utilizes a structured local image processing pipeline before sending content to generative AI models:
 
 ```
 [Uploaded Image]
@@ -270,10 +270,10 @@ This guarantees fast execution times, prevents payload size failures, and filter
 │  │  │  Non-root user    │    │  Non-root user       │  │   │
 │  │  └───────────────────┘    └──────────────────────┘  │   │
 │  │                                                       │   │
-│  │  mediguide-network (bridge)                          │   │
+│  │  ayumitra-network (bridge)                          │   │
 │  └─────────────────────────────────────────────────────┘   │
 │                                                             │
-│  Cloud Run option: gcloud run deploy mediguide-ai          │
+│  Cloud Run option: gcloud run deploy ayumitra-ai          │
 └─────────────────────────────────────────────────────────────┘
 ```
 

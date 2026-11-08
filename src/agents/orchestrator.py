@@ -1,5 +1,5 @@
 """
-MediGuide AI - Main Orchestrator Agent
+AyuMitra AI - Main Orchestrator Agent
 ======================================
 The root coordinator agent that receives user health queries and intelligently
 routes them to specialized sub-agents: Triage, Research, Scheduler, Vision, Lab.
@@ -62,7 +62,7 @@ def route_to_emergency(query: str) -> dict:
         "emergency_contacts": contacts,
         "immediate_steps": first_aid,
         "disclaimer": (
-            "MediGuide AI is NOT a substitute for professional medical advice. "
+            "AyuMitra AI is NOT a substitute for professional medical advice. "
             "In any emergency, always call your local emergency number (e.g., 911, 112, 108)."
         ),
     }
@@ -174,12 +174,12 @@ def create_medication_schedule(medications_csv: str) -> dict:
 # Root Orchestrator Agent Definition
 # ─────────────────────────────────────────────────────────────────────────────
 root_agent = LlmAgent(
-    name="MediGuideOrchestrator",
+    name="AyuMitraOrchestrator",
     model="gemini-2.5-flash",
 
     # System instructions define the agent's personality, scope, and routing logic
     instruction="""
-You are MediGuide AI — an advanced multimodal healthcare navigation assistant powered by
+You are AyuMitra AI — an advanced multimodal healthcare navigation assistant powered by
 a team of specialized AI agents. Your mission: help patients navigate their health safely,
 prevent medication errors, and flag critical findings before they become emergencies.
 

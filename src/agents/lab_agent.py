@@ -1,5 +1,5 @@
 """
-MediGuide AI — Lab Analysis Sub-Agent
+AyuMitra AI — Lab Analysis Sub-Agent
 ======================================
 Specialist ADK sub-agent that intelligently analyzes laboratory blood test
 reports, flags critical values, and generates patient-friendly explanations.
@@ -103,7 +103,7 @@ lab_agent = LlmAgent(
     model="gemini-2.5-flash",
 
     instruction="""
-You are the MediGuide Lab Intelligence Specialist — an AI agent with clinical expertise
+You are the AyuMitra Lab Intelligence Specialist — an AI agent with clinical expertise
 in laboratory medicine, pharmacology, and preventive diagnostics.
 
 Your role is to analyze laboratory test results, flag abnormal values, and generate

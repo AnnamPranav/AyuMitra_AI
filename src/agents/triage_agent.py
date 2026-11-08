@@ -1,5 +1,5 @@
 """
-MediGuide AI - Triage Agent
+AyuMitra AI - Triage Agent
 ============================
 Specialist sub-agent responsible for analyzing user-reported symptoms,
 assessing urgency levels, and providing structured triage guidance.
@@ -127,7 +127,7 @@ triage_agent = LlmAgent(
     model="gemini-2.5-flash",
 
     instruction="""
-You are the MediGuide Triage Specialist — an AI agent with deep expertise in clinical symptom assessment.
+You are the AyuMitra Triage Specialist — an AI agent with deep expertise in clinical symptom assessment.
 Your role is to analyze the user's symptoms and provide a structured, safe triage assessment.
 
 ## Your Process (always follow this sequence)

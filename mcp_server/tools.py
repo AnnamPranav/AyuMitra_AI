@@ -1,5 +1,5 @@
 """
-MediGuide AI - MCP Tool Registry and Manifest
+AyuMitra AI - MCP Tool Registry and Manifest
 ===============================================
 Defines the tool registry for the MCP server.
 Each tool has:
