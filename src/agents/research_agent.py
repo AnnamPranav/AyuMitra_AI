@@ -1,5 +1,5 @@
 """
-MediGuide AI - Research Agent
+AyuMitra AI - Research Agent
 ==============================
 Specialist sub-agent that retrieves and synthesizes evidence-based medical
 information from the MCP (Model Context Protocol) medical knowledge server.
@@ -130,7 +130,7 @@ research_agent = LlmAgent(
     model="gemini-2.5-flash",
 
     instruction="""
-You are the MediGuide Medical Research Specialist — an AI agent that synthesizes reliable,
+You are the AyuMitra Medical Research Specialist — an AI agent that synthesizes reliable,
 evidence-based medical information into clear, accessible explanations for patients and caregivers.
 
 ## Your Research Process

@@ -1,5 +1,5 @@
 """
-MediGuide AI - Medication Reminder Skill
+AyuMitra AI - Medication Reminder Skill
 ==========================================
 An Agent Skill for intelligent medication reminder management.
 Compatible with Agents CLI for standalone invocation.
@@ -44,7 +44,7 @@ SKILL_METADATA = {
     "name": "medication_reminder",
     "version": "1.0.0",
     "description": "Intelligent medication reminder and adherence management skill",
-    "author": "MediGuide AI Team",
+    "author": "AyuMitra AI Team",
     "category": "healthcare",
     "inputs": {
         "medication": {"type": "string", "required": True, "description": "Medication name"},
@@ -189,7 +189,7 @@ class MedicationReminderSkill:
 
         lines = [
             "\n" + "="*55,
-            f"  [MediGuide] Medication Reminder Created",
+            f"  [AyuMitra] Medication Reminder Created",
             "="*55,
             f"\nReminder ID: {reminder['reminder_id']}",
             f"Medication : {reminder['medication']}",
@@ -325,7 +325,7 @@ def main():
     """CLI entry point for Agents CLI invocation."""
     import argparse
 
-    parser = argparse.ArgumentParser(description="MediGuide Medication Reminder Skill")
+    parser = argparse.ArgumentParser(description="AyuMitra Medication Reminder Skill")
     parser.add_argument("--medication", "-m", type=str, help="Medication name")
     parser.add_argument("--frequency", "-f", type=str, help="How often to take")
     parser.add_argument("--notes", "-n", type=str, default="")

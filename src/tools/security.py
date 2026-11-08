@@ -1,7 +1,7 @@
 """
-MediGuide AI - Security Layer
+AyuMitra AI - Security Layer
 ==============================
-Implements security features for the MediGuide AI system including:
+Implements security features for the AyuMitra AI system including:
 
   1. PII (Personally Identifiable Information) Detection & Redaction
      - Names, phone numbers, email addresses, SSNs, passport numbers
@@ -42,7 +42,7 @@ from typing import Optional
 # Security Audit Logger
 # Logs security events WITHOUT logging actual PII
 # ─────────────────────────────────────────────────────────────────────────────
-security_logger = logging.getLogger("mediguide.security")
+security_logger = logging.getLogger("ayumitra.security")
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [SECURITY] %(levelname)s: %(message)s",
@@ -51,7 +51,7 @@ logging.basicConfig(
 
 class SecurityLayer:
     """
-    Centralized security layer for MediGuide AI.
+    Centralized security layer for AyuMitra AI.
 
     Usage:
         security = SecurityLayer()
@@ -273,7 +273,7 @@ class SecurityLayer:
                 return {
                     "is_blocked": True,
                     "reason": (
-                        "This query involves content MediGuide AI cannot assist with. "
+                        "This query involves content AyuMitra AI cannot assist with. "
                         "If you or someone you know is in crisis, please contact a crisis helpline: "
                         "India: iCall 9152987821 | International: befrienders.org"
                     ),

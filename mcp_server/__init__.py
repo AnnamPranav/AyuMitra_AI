@@ -1,1 +1,1 @@
-"""MediGuide AI - MCP Server Package"""
+"""AyuMitra AI - MCP Server Package"""

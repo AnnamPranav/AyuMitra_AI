@@ -1,1 +1,1 @@
-"""MediGuide AI - Tools Package"""
+"""AyuMitra AI - Tools Package"""

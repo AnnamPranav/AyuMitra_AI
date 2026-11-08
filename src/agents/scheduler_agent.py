@@ -1,5 +1,5 @@
 """
-MediGuide AI - Scheduler Agent
+AyuMitra AI - Scheduler Agent
 ================================
 Specialist sub-agent responsible for health scheduling intelligence:
   - Medication reminders with intelligent timing
@@ -318,7 +318,7 @@ scheduler_agent = LlmAgent(
     model="gemini-2.5-flash",
 
     instruction="""
-You are the MediGuide Health Scheduler — an AI agent that helps users organize
+You are the AyuMitra Health Scheduler — an AI agent that helps users organize
 their healthcare journey through smart scheduling, reminders, and health goal tracking.
 
 ## Your Capabilities

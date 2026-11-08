@@ -1,7 +1,7 @@
 """
-MediGuide AI - Main Entry Point
+AyuMitra - Main Entry Point
 ================================
-The main application entry point for MediGuide AI.
+The main application entry point for AyuMitra
 Provides multiple interfaces:
   1. Interactive CLI chat interface
   2. Single-query mode (for scripting/testing)
@@ -31,6 +31,7 @@ import asyncio
 import json
 from datetime import datetime
 from typing import Optional
+from src.api.router import router as api_router
 
 # ── Fix: Add project root to sys.path ────────────────────────────────────────
 # When running `python src/main.py`, Python adds src/ to sys.path, not the
@@ -76,7 +77,7 @@ def validate_environment():
 # ─────────────────────────────────────────────────────────────────────────────
 
 def setup_adk():
-    """Initializes and returns the ADK runner with the MediGuide agent."""
+    """Initializes and returns the ADK runner with the AyuMitra agent."""
     from google.adk.runners import Runner
     from google.adk.sessions import InMemorySessionService
     from src.agents.orchestrator import root_agent
@@ -88,7 +89,7 @@ def setup_adk():
     # Note: google-adk 2.3.0 uses app_name + session_service parameters
     runner = Runner(
         agent=root_agent,
-        app_name="mediguide_ai",
+        app_name="ayumitra_ai",
         session_service=session_service,
     )
 
@@ -104,7 +105,7 @@ async def run_agent_query(
     image_path: Optional[str] = None
 ) -> str:
     """
-    Runs a single query (and optional medical image) through the MediGuide agent system.
+    Runs a single query (and optional medical image) through the AyuMitra agent system.
 
     Args:
         runner: The ADK Runner instance.
@@ -280,7 +281,7 @@ def get_simulated_agent_response(query: str, image_path: Optional[str] = None) -
 
     # 5. Default health/symptom check fallback
     return (
-        "### 🩺 MediGuide Health Assessment\n"
+        "### 🩺 AyuMitra Health Assessment\n"
         "**Symptoms analyzed**: Headache and fever for 2 days.\n"
         "**Urgency**: **Level 2 (YELLOW) — Semi-urgent**.\n\n"
         "### 🩺 Possible Considerations\n"
@@ -301,9 +302,9 @@ def get_simulated_agent_response(query: str, image_path: Optional[str] = None) -
 # ─────────────────────────────────────────────────────────────────────────────
 
 def print_banner():
-    """Prints the MediGuide AI welcome banner."""
+    """Prints the AyuMitra welcome banner."""
     print("\n" + "="*65)
-    print("  🏥  MediGuide AI — Multi-Agent Healthcare Assistant")
+    print("  🏥  AyuMitra — Multi-Agent Healthcare Assistant")
     print("  Powered by Google ADK + Gemini 2.0 Flash")
     print("  Kaggle AI Agents Capstone Project")
     print("="*65)
@@ -315,7 +316,7 @@ def print_banner():
     print("  • Preventive health screening guidance")
     print("  • Drug interaction checking")
     print("\n⚠️  IMPORTANT DISCLAIMER")
-    print("  MediGuide AI provides EDUCATIONAL information only.")
+    print("  AyuMitra provides EDUCATIONAL information only.")
     print("  It is NOT a substitute for professional medical advice.")
     print("  Always consult a qualified healthcare professional.")
     print("\nType 'help' for commands | 'quit' to exit")
@@ -334,7 +335,7 @@ async def interactive_chat():
 
     # Create session (google-adk 2.3.0: session_id is optional)
     await session_service.create_session(
-        app_name="mediguide_ai",
+        app_name="ayumitra_ai",
         user_id=user_id,
         session_id=session_id,
     )
@@ -378,14 +379,14 @@ async def interactive_chat():
             continue
 
         # Process through the agent
-        print("\n🤔 MediGuide AI is thinking...\n")
+        print("\n🤔 AyuMitra is thinking...\n")
         conversation_count += 1
 
         try:
             response = await run_agent_query(
                 runner, session_service, user_id, session_id, user_input
             )
-            print(f"MediGuide AI:\n{response}\n")
+            print(f"AyuMitra:\n{response}\n")
             print("-" * 50 + "\n")
         except Exception as e:
             print(f"❌ An error occurred: {str(e)}")
@@ -400,7 +401,7 @@ async def single_query_mode(query: str, image_path: Optional[str] = None):
     session_id = f"single_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
 
     await session_service.create_session(
-        app_name="mediguide_ai",
+        app_name="ayumitra_ai",
         user_id=user_id,
         session_id=session_id,
     )
@@ -424,7 +425,7 @@ async def single_query_mode(query: str, image_path: Optional[str] = None):
 def parse_args():
     """Parses command-line arguments."""
     parser = argparse.ArgumentParser(
-        description="MediGuide AI — Multi-Agent Healthcare Assistant (Image Processing Enabled)",
+        description="AyuMitra — Multi-Agent Healthcare Assistant (Image Processing Enabled)",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
@@ -473,7 +474,7 @@ async def run_demo():
     session_id = "demo_session_001"
 
     await session_service.create_session(
-        app_name="mediguide_ai",
+        app_name="ayumitra_ai",
         user_id=user_id,
         session_id=session_id,
     )
@@ -488,7 +489,7 @@ async def run_demo():
         response = await run_agent_query(
             runner, session_service, user_id, session_id, query
         )
-        print(f"MediGuide AI:\n{response}\n")
+        print(f"AyuMitra:\n{response}\n")
         print("=" * 65 + "\n")
         await asyncio.sleep(1)  # Pause between queries for readability
 
@@ -510,6 +511,9 @@ def main():
             asyncio.run(single_query_mode("Please analyze this medical image", args.image))
         else:
             asyncio.run(interactive_chat())
+
+
+
 
 
 if __name__ == "__main__":

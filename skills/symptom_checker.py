@@ -1,5 +1,5 @@
 """
-MediGuide AI - Symptom Checker Skill
+AyuMitra AI - Symptom Checker Skill
 ======================================
 An Agent Skill (compatible with Agents CLI) that provides a structured
 symptom checking workflow as a standalone, reusable skill.
@@ -46,7 +46,7 @@ SKILL_METADATA = {
     "name": "symptom_checker",
     "version": "1.0.0",
     "description": "Structured symptom assessment and triage guidance skill",
-    "author": "MediGuide AI Team",
+    "author": "AyuMitra AI Team",
     "category": "healthcare",
     "inputs": {
         "symptoms": {"type": "string", "required": True, "description": "Comma-separated list of symptoms"},
@@ -149,7 +149,7 @@ class SymptomCheckerSkill:
 
         lines = [
             "\n" + "="*55,
-            "  [MediGuide] Symptom Assessment",
+            "  [AyuMitra] Symptom Assessment",
             "="*55,
             f"\nSymptoms : {', '.join(assessment.get('symptoms_assessed', []))}",
             f"Duration : {assessment.get('duration', 'unknown')}",
@@ -203,7 +203,7 @@ def main():
     import argparse
     import sys
 
-    parser = argparse.ArgumentParser(description="MediGuide Symptom Checker Skill")
+    parser = argparse.ArgumentParser(description="AyuMitra Symptom Checker Skill")
     parser.add_argument("--symptoms", "-s", type=str, help="Comma-separated symptoms")
     parser.add_argument("--duration", "-d", type=str, default="unknown")
     parser.add_argument("--severity", type=str, default="moderate", choices=["mild", "moderate", "severe"])

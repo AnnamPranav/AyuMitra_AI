@@ -1,5 +1,5 @@
 """
-MediGuide AI — Perfect PPT Generator
+AyuMitra AI — Perfect PPT Generator
 ======================================
 Strategy: Clone the original template slides directly.
 Each slide is cloned from the template and its placeholder
@@ -28,7 +28,7 @@ STUDENTS = [
     ("Student Name 3",    "Roll No. 3"),
 ]
 
-PROJECT_TITLE   = "MediGuide AI: A Multimodal Multi-Agent Healthcare Navigation System"
+PROJECT_TITLE   = "AyuMitra – An Multi-Agent Personalized Healthcare Companion"
 COLLEGE         = "Vardhaman College Of Engineering"
 DEPT            = "Department of Information Technology"
 DATE            = "17-07-2026"
@@ -36,7 +36,7 @@ AY              = "2025-2026"
 BATCH           = "2023-2027"
 
 TEMPLATE = r'C:\Users\marut\capstone\presentations\Abstract Level Review Presentation.pptx'
-OUTPUT   = r'C:\Users\marut\capstone\presentations\MediGuide_AI_Presentation_Final.pptx'
+OUTPUT   = r'C:\Users\marut\capstone\presentations\AyuMitra_AI_Presentation_Final.pptx'
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -241,9 +241,9 @@ intro_lines = [
     "• Medication errors cause 1 in 131 outpatient deaths — mostly from undetected drug combinations and wrong timing.",
     "• 1.5 billion people globally will use health apps by 2025 (Statista) — AI can bridge the accessibility gap.",
     "",
-    "What is MediGuide AI?",
+    "What is AyuMitra AI?",
     "",
-    "• MediGuide AI is a multimodal, multi-agent healthcare navigation system built on Google's Agent Development Kit (ADK).",
+    "• AyuMitra AI is a multimodal, multi-agent healthcare navigation system built on Google's Agent Development Kit (ADK).",
     "• It deploys 5 specialized sub-agents — Triage, Research, Scheduler, Vision, and Lab — coordinated by a root Orchestrator.",
     "• Combines deterministic clinical databases with Gemini LLM reasoning and Pillow image processing.",
     "• Unlike general-purpose chatbots, safety-critical decisions (drug interactions, lab flags) use deterministic code — not LLM guessing.",
@@ -290,7 +290,7 @@ problem_lines = [
     "Research Gap",
     "• General-purpose AI (ChatGPT, Claude) gives probabilistic text — not deterministic safety guarantees.",
     "• No existing app unifies: prescription OCR + drug interactions + lab analysis + food-drug safety",
-    "  + medication scheduling in one agentic pipeline. MediGuide AI fills this gap.",
+    "  + medication scheduling in one agentic pipeline. AyuMitra AI fills this gap.",
 ]
 set_shape_text(shapes3[2], problem_lines, bold_first=True)
 set_shape_single(shapes3[3], DATE)
@@ -364,7 +364,7 @@ set_shape_single(shapes5[3], DATE)
 # Add a proper PPTX table
 add_table_to_slide(
     s5,
-    headers=["Ref.", "Authors & Title", "Key Contribution", "Gap Addressed by MediGuide AI"],
+    headers=["Ref.", "Authors & Title", "Key Contribution", "Gap Addressed by AyuMitra AI"],
     rows=[
         ["[1]",
          "Sharma & Patel (2026). Coordinated Multi-Agent Triage using Google ADK. IEEE JBHI, 30(2), 112-124.",
@@ -416,7 +416,7 @@ set_shape_single(shapes6[3], DATE)
 
 add_table_to_slide(
     s6,
-    headers=["Feature / Capability", "ChatGPT / Claude", "Generic Health Apps", "MediGuide AI"],
+    headers=["Feature / Capability", "ChatGPT / Claude", "Generic Health Apps", "AyuMitra AI"],
     rows=[
         ["Drug-Drug Interaction",       "LLM guess (probabilistic)",  "Basic alerts only",      "Deterministic database — guaranteed"],
         ["Therapeutic Duplication",     "Not guaranteed",             "No",                     "YES — Trimox = Amoxicillin (code logic)"],
@@ -453,7 +453,7 @@ abstract_lines = [
     "Over 250,000 preventable deaths occur annually due to medical errors — predominantly from undetected drug interactions, misread laboratory reports, and inadequate patient guidance. Existing AI assistants provide probabilistic text responses that lack the deterministic safety guarantees required in clinical contexts. No current application unifies prescription analysis, lab interpretation, food-drug safety, and medication scheduling in one agentic pipeline.",
     "",
     "Objective:",
-    "MediGuide AI addresses this crisis by deploying a multimodal, multi-agent healthcare navigation system built on Google's Agent Development Kit (ADK) that empowers patients to safely interpret their own health data.",
+    "AyuMitra AI addresses this crisis by deploying a multimodal, multi-agent healthcare navigation system built on Google's Agent Development Kit (ADK) that empowers patients to safely interpret their own health data.",
     "",
     "Methodology:",
     "The system coordinates five specialized AI sub-agents — TriageAgent, ResearchAgent, SchedulerAgent, VisionAgent, and LabAgent — through a root OrchestratorAgent. Safety-critical operations (drug interaction checking, lab value flagging) use deterministic clinical databases; contextual reasoning uses Gemini LLM. A Pillow image preprocessing pipeline handles prescription OCR, skin analysis, X-ray, and ECG routing.",
@@ -462,7 +462,7 @@ abstract_lines = [
     "The system correctly identifies therapeutic duplications (Trimox/Amoxicillin), flags dangerous food interactions (Warfarin × Grapefruit = 2–5× overdose risk), annotates 35+ lab tests with CRITICAL/WARNING/NORMAL severity flags, computes a quantified Health Risk Score (1–100), and generates clinically timed daily medication schedules.",
     "",
     "Implications:",
-    "MediGuide AI demonstrates that combining deterministic clinical knowledge bases with LLM reasoning in a specialist multi-agent architecture can deliver safer, more reliable, and more accessible healthcare guidance than any single general-purpose AI model — directly targeting the preventable medical error crisis.",
+    "AyuMitra AI demonstrates that combining deterministic clinical knowledge bases with LLM reasoning in a specialist multi-agent architecture can deliver safer, more reliable, and more accessible healthcare guidance than any single general-purpose AI model — directly targeting the preventable medical error crisis.",
     "",
     "Keywords: Multi-Agent AI, Google ADK, Drug Interaction, Lab Report Analysis, Multimodal Vision, Medication Safety, Clinical Decision Support, Healthcare Navigation",
 ]
@@ -484,7 +484,7 @@ shapes8 = list(s8.shapes)
 novelty_lines = [
     "1.  DETERMINISTIC SAFETY CORE — Drug-drug interactions, brand-to-generic mapping, and food-drug warnings",
     "    use deterministic code, not LLM inference. This is the fundamental safety architecture distinction.",
-    "    General-purpose AI cannot guarantee drug interaction correctness — MediGuide's code can.",
+    "    General-purpose AI cannot guarantee drug interaction correctness — AyuMitra's code can.",
     "",
     "2.  QUANTIFIED HEALTH RISK SCORE — A 7-factor weighted algorithm produces a 1–100 clinical risk metric,",
     "    replacing vague urgency labels. This aligns with established triage methodologies (NEWS2, APACHE).",
@@ -493,7 +493,7 @@ novelty_lines = [
     "3.  UNIFIED MULTIMODAL PIPELINE — One system handles prescriptions, X-rays, ECGs, skin conditions, and",
     "    blood reports — with specialized Pillow preprocessing per image modality before LLM analysis.",
     "",
-    "4.  FOOD-DRUG INTELLIGENCE — Most apps check drug-drug interactions. MediGuide additionally detects",
+    "4.  FOOD-DRUG INTELLIGENCE — Most apps check drug-drug interactions. AyuMitra additionally detects",
     "    dangerous food-drug interactions across 8 food categories (Grapefruit × Warfarin = 2–5× overdose).",
     "",
     "5.  ADK MULTI-AGENT SPECIALIZATION — First healthcare application of Google ADK with 5 domain-specialist",
@@ -663,7 +663,7 @@ r8.font.size = Pt(11)
 
 p9 = tf11.add_paragraph()
 r9 = p9.add_run()
-r9.text = "GitHub: github.com/maruthisaiteja/mediguide-ai"
+r9.text = "GitHub: https://github.com/AnnamPranav/AyuMitra"
 r9.font.name = "Aptos"
 r9.font.size = Pt(10)
 
