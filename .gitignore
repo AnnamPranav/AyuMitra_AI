@@ -56,3 +56,7 @@ logs/
 
 # ─── mypy ─────────────────────────────────────────────────────────────────────
 .mypy_cache/
+
+# Local runtime and backup files
+ayumitra_ai/.adk/
+*.save
